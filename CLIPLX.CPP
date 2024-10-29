@@ -12,19 +12,19 @@ int will_rcb_win (int X, int Y){
 }
 
 int main() {
-  int X,Y,Z,T;
+  int X,Y,Z,T, i = 0;
   cout<<"Entet total number of test cases - ";
   cin>>T;
-  for(int i=0;i<T;i++)
-  {
-  cout<<"\nEnter total number of points required and total remaining matches - ";
-  cin>>X>>Y;
-  int result = will_rcb_win(X,Y);
-  if(result !=0)
-    cout<<"Total wins required(atleast) - "<<result;
-  else
-	 cout<<"RCB can't qualify for Playoff";
-  }
-	return 0;
+  while(i < T){
+	cout<<"\nEnter total number of points required and total remaining matches - ";
+  	cin>>X>>Y;
+  	int result = will_rcb_win(X,Y);
+  	if(result !=0)
+    		cout<<"Total wins required(atleast) - "<<result;
+  	else
+		cout<<"RCB can't qualify for Playoff";
+	i++
+  } 
+  return 0;
 }
 
